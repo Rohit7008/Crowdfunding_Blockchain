@@ -10,7 +10,7 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <ThirdwebProvider desiredChainId={ChainId.Goerli}> 
+  <ThirdwebProvider activeChain={ Goerli } clientId="your-client-id">
     <Router>
       <StateContextProvider>
         <App />
@@ -18,3 +18,10 @@ root.render(
     </Router>
   </ThirdwebProvider> 
 )
+
+/* clientId can be found at https://thirdweb.com/dashboard/settings/api-keys */
+
+
+/* 
+change 'desiredChainId' to 'activeChain' and 'clientId' props by following thirdweb documentation
+*/
